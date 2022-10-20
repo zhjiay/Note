@@ -16,7 +16,8 @@
         Rect(int x, int y, int width, int height);
         Rect rect = new Rect(cX - 120, cY - 120, 240, 240);
         Mat matCut = new Mat(mat3, rect);
-##### Mat值操作 Get Set At
+##### Mat值操作 At
+    
 
 ---
 ### Size
