@@ -6,7 +6,9 @@
 ## Mat
 #### Mat的构造函数
         Mat mat = new Mat(rows:4,cols: 3, MatType.CV_16SC4);
-    Mat本质上是一个至少二维（2dim)的数组。第一个值是行数，既第一个维度的数值，第二个是列数，既每一行的值。第三个是Mat的元素类型，其定义为 16为16bit存储；S为有符号的，或者是U无符号的，或者是F浮点数；第三个C表示Channels，频道数，1-4表示该位置是几维向量。如1，则是单通道，如果是3则是 Vec3i，这种。
+    Mat本质上是一个至少二维（2dim)的数组。第一个值是行数，既第一个维度的数值，第二个是列数，既每一行的值。
+    第三个是Mat的元素类型，其定义为 16为16bit存储；S为有符号的，或者是U无符号的，或者是F浮点数；
+    第三个C表示Channels，频道数，1-4表示该位置是几维向量。如1，则是单通道，如果是3则是 Vec3i，这种。
     其余的构造函数还有：（主要是在rows和cols上不同，类型基本是固定的）
         ---利用Size类
         Size size = new Size(width: 5, height: 3);
@@ -18,6 +20,8 @@
         Mat matCut = new Mat(mat3, rect);
 #### MatType
     MatType.CV_16SC4，如此。
+    其数据类型为严格对应基本数据类型和Vec
+
 
 #### Mat值操作 At  unsafe
     不安全的获取某个位置元素值的方法。内部的参数是元素所在位置的维度，i0 demension 0 既第几行,i1 demension 1 表示第几列，i2，表示的是第几个channel；
@@ -33,7 +37,7 @@
     安全的Get操作
         public T Get<T>(int i0,int i1,int i2);
     返回 (i0,i1,i2)处的 T value；
-
+    
 ---
 ## Size
 #### Size的定义
